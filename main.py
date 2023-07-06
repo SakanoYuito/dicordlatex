@@ -21,7 +21,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    # メッセージが"$hello"で始まっていたら"Hello!"と応答
     if message.content[0] == '$' and message.content[-1] == '$':
         with open('./main.md', 'w') as f:
             f.write("$\displaystyle " + message.content[1:])
