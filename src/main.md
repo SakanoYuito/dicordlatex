@@ -1,1 +1,0 @@
-$\displaystyle \int^{b}_{a} f(x) dx = \lim_{n \to \infty} \sum^{n-1}_{i=0} f(x_{i}) \Delta x$

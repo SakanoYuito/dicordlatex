@@ -1,7 +1,7 @@
 import re, requests, cv2, numpy, subprocess
 
 def process():
-    subprocess.run("docker run --name latecon --rm -v ./src:/src -it dockerlatex pandoc -t html --webtex  main.md -o output.html", shell=True)
+    subprocess.run("docker run --name latecon --rm -v ./src:/src -it pd pandoc -t html --webtex  main.md -o output.html", shell=True)
 
     with open("./src/output.html", "r") as f:
         l = f.read()
