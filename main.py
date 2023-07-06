@@ -20,7 +20,7 @@ async def on_message(message):
     # 自分のメッセージを無効
     if message.author == client.user:
         return
-
+    message.content.replace('\n', ' ')
     if message.content[0] == '$' and message.content[-1] == '$':
         with open('./main.md', 'w') as f:
             f.write("$\displaystyle " + message.content[1:])
