@@ -20,10 +20,11 @@ async def on_message(message):
     # 自分のメッセージを無効
     if message.author == client.user:
         return
-    message.content.replace('\n', ' ')
-    if message.content[0] == '$' and message.content[-1] == '$':
+    msg = message.content.replace('\n', ' ')
+    msg = msg.strip()
+    if msg[0] == '$' and msg[-1] == '$':
         with open('./main.md', 'w') as f:
-            f.write("$\displaystyle " + message.content[1:])
+            f.write("$\displaystyle " + msg[1:])
         process()
         await message.channel.send(file=discord.File("./img_w.png"))
 
