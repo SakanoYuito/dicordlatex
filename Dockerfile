@@ -5,3 +5,5 @@ RUN apt-get update -q && apt-get install -qy \
     pandoc
 WORKDIR /src
 VOLUME /src
+
+RUN python ./main.py
