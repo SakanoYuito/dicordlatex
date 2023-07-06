@@ -23,6 +23,7 @@ async def on_message(message):
     msg = message.content.replace('\n', ' ')
     msg = msg.strip()
     if msg[0] == '$' and msg[-1] == '$':
+        msg = '$' + msg[1:-1].strip() + '$'
         with open('./main.md', 'w') as f:
             f.write("$\displaystyle " + msg[1:])
         process()
