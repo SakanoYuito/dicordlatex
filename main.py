@@ -23,10 +23,10 @@ async def on_message(message):
 
     # メッセージが"$hello"で始まっていたら"Hello!"と応答
     if message.content[0] == '$' and message.content[-1] == '$':
-        with open('./src/main.md', 'w') as f:
+        with open('./main.md', 'w') as f:
             f.write("$\displaystyle " + message.content[1:])
         process()
-        await message.channel.send(file=discord.File("./img/img_w.png"))
+        await message.channel.send(file=discord.File("./img_w.png"))
 
 
 # クライアントの実行
