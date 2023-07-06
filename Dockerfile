@@ -13,7 +13,4 @@ RUN apt-get update -q && apt-get install -qy \
 RUN pip install -U pip && \
     pip install --no-cache-dir -r ./requirements.txt
 
-RUN touch ./src/main.md
-
-
 CMD [ "python", "main.py" ]
