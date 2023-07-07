@@ -7,7 +7,6 @@ VOLUME /src
 COPY . .
 
 RUN apt-get update -q && apt-get install -qy \
-    pandoc \
     libopencv-dev
 
 RUN pip install -U pip && \
