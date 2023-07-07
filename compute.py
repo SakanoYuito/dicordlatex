@@ -14,5 +14,3 @@ def process(eq):
     img[idx] = [255, 255, 255, 255]
     img = cv2.copyMakeBorder(img, 5, 5, 5, 5, cv2.BORDER_CONSTANT, value=[255, 255, 255, 255])
     cv2.imwrite("img_w.png", img)
-    img = cv2.bilateralFilter(img, 9, 75, 75)
-    cv2.imwrite("img_b.png", img)

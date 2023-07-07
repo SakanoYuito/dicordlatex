@@ -26,7 +26,7 @@ async def on_message(message):
         msg = '$' + msg[1:-1].strip() + '$'
         eq = "\dpi{150} \displaystyle " + msg[1:-1]
         process(eq)
-        await message.channel.send(file=discord.File("./img_b.png"))
+        await message.channel.send(file=discord.File("./img_w.png"))
 
 
 # クライアントの実行
