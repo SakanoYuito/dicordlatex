@@ -24,9 +24,9 @@ async def on_message(message):
     msg = msg.strip()
     if msg[0] == '$' and msg[-1] == '$':
         msg = '$' + msg[1:-1].strip() + '$'
-        eq = "\dpi{400} \displaystyle " + msg[1:-1]
+        eq = "\dpi{150} \displaystyle " + msg[1:-1]
         process(eq)
-        await message.channel.send(file=discord.File("./img_w.png"))
+        await message.channel.send(file=discord.File("./img_b.png"))
 
 
 # クライアントの実行
